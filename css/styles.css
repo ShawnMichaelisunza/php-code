@@ -1,0 +1,37 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.login-form{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn-1{
+    display: flex;
+    margin: 30px auto;
+}
+.btn-1 input{
+    margin:0 4%;
+    border: none;
+    width: 100px;
+    background: darkgreen;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.btn-1 input:hover{
+    background-color: limegreen;
+    box-shadow: 1px 1px 10px lightgreen;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: darkgreen;
+}
+
+/* search */
