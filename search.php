@@ -42,8 +42,8 @@ mysqli_close($conn);
     <?php foreach($addInfo as $info){ ?>
         
         <table class="card" >
-             <tr class="img-1">
-                <th>Image</th>
+            <tr class="img-1">
+                <th><img src="images/blank.PNG" style="width: 50%; border-radius: 50%; margin-top: 10px;" alt=""></th>
             </tr>
             <tr>
                 <td><i class="fas fa-user-alt"></i>&nbsp;<span><?php echo $info['l_name']." ".$info['f_name']; ?><span></td>
