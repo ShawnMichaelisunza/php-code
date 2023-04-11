@@ -24,7 +24,7 @@ $next_page = $page_no + 1;
 
 
 // get the total count of records
-$result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records FROM login_register.add_info")
+$result_count = mysqli_query($conn, "SELECT COUNT(*) as total_records FROM project_data.add_info")
  or die(mysqli_error($conn));
 
 //  total records
@@ -38,7 +38,7 @@ $total_no_of_pages = ceil($total_records / $total_records_per_page);
 
 // write query fro all pizzas
 
-$sql = "SELECT l_name, f_name, m_name, email, contacts , id FROM add_info ORDER BY create_at LIMIT 
+$sql = "SELECT l_name, f_name, m_name, email, contacts , id FROM add_info ORDER BY time_stamp LIMIT 
 $offset , $total_records_per_page";
 
 // make query & get result

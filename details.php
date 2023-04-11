@@ -53,7 +53,7 @@ if(isset($_GET['id'])){
     <li>Middle Name: <a><?php echo htmlspecialchars($info['m_name']);?></a></li>
     <li>Email Address: <a><?php echo htmlspecialchars($info['email']);?></a></li>
     <li>Contact No: <a><?php echo htmlspecialchars($info['contacts']);?></a></li>
-    <li>Date & Time: <a><?php echo htmlspecialchars($info['create_at']);?></a></li>
+    <li>Date & Time: <a><?php echo htmlspecialchars($info['time_stamp']);?></a></li>
     </ul>
 
     <!-- DELETE FORM-->

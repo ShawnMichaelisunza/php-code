@@ -41,6 +41,7 @@ if(isset($_POST['sign-up'])){
             $errors['email'] = 'Email is not valid';
         }
         // sql
+        
         $sql = "INSERT INTO register(username, password, email) VALUES ('$username', '$password','$email')";
         $result = mysqli_query($conn, $sql);
         if($result){

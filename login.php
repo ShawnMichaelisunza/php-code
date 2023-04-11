@@ -30,7 +30,7 @@ if(isset($_POST['sign-in'])){
         // sql 
 
         $sql ="SELECT * FROM register WHERE username='$username' AND password='$password'";
-        $result =mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) == 1){
             $_SESSION['username'] = $username;
             header('Location: homepage.php');

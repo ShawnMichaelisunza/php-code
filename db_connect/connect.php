@@ -2,7 +2,7 @@
 
 // connect database
 
-$conn = mysqli_connect('localhost','shawn','12312345','login_register');
+$conn = mysqli_connect('localhost','shawn','12312345','project_data');
 
 
 
