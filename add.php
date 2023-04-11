@@ -1,11 +1,46 @@
 <?php
 
 include('db_connect/connect.php');
-// include('db_connect/processing.php');
 
 $lastname = $firstname = $middlename = $email = $contact = '';
 $errors = array('last-name' => '', 'first-name' => '', 'middle-name' => '', 'email' => '','contact' => '');
 if(isset($_POST['submit'])){
+
+    // upload photos
+
+    function get_size($size){
+        $kb_size = $size / 10024;
+        $format_size = number_format($kb_size, 2);
+        return $format_size;
+    }
+    
+    $path = 'upload/'.$_POST['foldername'];
+    $size = get_size($_FILES['picture']['size']);
+    
+    if($size < 4.0){
+        
+        if(!file_exists($path)){
+            mkdir($path, 0777, true);
+        }
+    
+        $temp_file = $_FILES['picture']['tmp_name'];
+    
+        if($temp_file != ""){
+    
+            $newfilePath = $path. "/". $_FILES['picture']['name'];
+    
+            if(move_uploaded_file($temp_file, $newfilePath)){
+                echo "Success";
+            }else{
+                echo "Error";
+            }
+        }
+    
+    }else{
+        echo "File to Large";
+    }
+
+    // ----------------------
     
     $lastname = $_POST['last-name'];
     $firstname = $_POST['first-name'];
@@ -110,7 +145,7 @@ if(isset($_POST['submit'])){
         <input type="number" name="contact" value="<?php htmlspecialchars($contact)?>">
         <div style="margin: 3px 20%; color: red;"><?php echo $errors['contact']; ?></div>
         <label for="">Picture</label>
-        <input type="text" name="foldername" value="" id="picture">
+        <input type="text" name="foldername" value="" id="picture" style="display: hide;">
         <input type="file" name="picture" value="" id="picture">
         
         <div class="btn-1">
