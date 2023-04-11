@@ -7,7 +7,7 @@ $search = $_GET['search'];
 
 // write query fro all pizzas
 $sql = "SELECT l_name, f_name, m_name, email, contacts , id FROM add_info WHERE f_name 
-LIKE '%$search%' or l_name LIKE '%$search%' ORDER BY create_at";
+LIKE '%$search%' or l_name LIKE '%$search%' ORDER BY time_stamp";
 
 // make query & get result
 $result = mysqli_query($conn, $sql);

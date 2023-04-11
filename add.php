@@ -1,7 +1,7 @@
 <?php
 
 include('db_connect/connect.php');
-include('db_connect/processing.php');
+// include('db_connect/processing.php');
 
 $lastname = $firstname = $middlename = $email = $contact = '';
 $errors = array('last-name' => '', 'first-name' => '', 'middle-name' => '', 'email' => '','contact' => '');
@@ -110,7 +110,9 @@ if(isset($_POST['submit'])){
         <input type="number" name="contact" value="<?php htmlspecialchars($contact)?>">
         <div style="margin: 3px 20%; color: red;"><?php echo $errors['contact']; ?></div>
         <label for="">Picture</label>
+        <input type="text" name="foldername" value="" id="picture">
         <input type="file" name="picture" value="" id="picture">
+        
         <div class="btn-1">
             <input type="submit" name="submit" value="Submit">
         </div>

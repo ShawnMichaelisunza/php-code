@@ -72,7 +72,6 @@ mysqli_close($conn);
 <div class="boxes">
     <div class="cards">
     <?php foreach($addInfo as $info){ ?>
-        
         <table class="card" >
              <tr class="img-1">
                 <th><img src="images/blank.PNG" style="width: 50%; border-radius: 50%; margin-top: 10px;" alt=""></th>

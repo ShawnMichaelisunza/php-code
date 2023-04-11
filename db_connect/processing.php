@@ -6,10 +6,15 @@ function get_size($size){
     return $format_size;
 }
 
+$path = 'upload/'.$_POST['foldername'];
 $size = get_size($_FILES['picture']['size']);
 
 if($size < 4.0){
-    echo "Success";
+    
+    if(!file_exists($path)){
+        mkdir($path, 0777, true);
+    }
+
 }else{
     echo "File to Large";
 }
